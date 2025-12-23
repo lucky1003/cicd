@@ -1,0 +1,103 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### BusinessPartners
+# @name BusinessPartners_GET
+GET {{server}}/odata/v4/catalog/BusinessPartners
+Authorization: Basic {{username}}:{{password}}
+
+
+### BusinessPartners
+# @name BusinessPartners_POST
+POST {{server}}/odata/v4/catalog/BusinessPartners
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "BPID": 2564517,
+  "BPName": "BPName-2564517",
+  "BPType": "BPType-2564517",
+  "Country": "517",
+  "City": "City-2564517",
+  "Phone": "Phone-2564517",
+  "Email": "Email-2564517"
+}
+
+
+### BusinessPartners
+# @name BusinessPartners_PATCH
+PATCH {{server}}/odata/v4/catalog/BusinessPartners/2564517
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "BPID": 2564517,
+  "BPName": "BPName-2564517",
+  "BPType": "BPType-2564517",
+  "Country": "517",
+  "City": "City-2564517",
+  "Phone": "Phone-2564517",
+  "Email": "Email-2564517"
+}
+
+
+### BusinessPartners
+# @name BusinessPartners_DELETE
+DELETE {{server}}/odata/v4/catalog/BusinessPartners/2564517
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### PurchaseOrders
+# @name PurchaseOrders_GET
+GET {{server}}/odata/v4/catalog/PurchaseOrders
+Authorization: Basic {{username}}:{{password}}
+
+
+### PurchaseOrders
+# @name PurchaseOrders_POST
+POST {{server}}/odata/v4/catalog/PurchaseOrders
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "POID": 29997187,
+  "VendorID": 33,
+  "POType": "POType-29997187",
+  "Plant": "t-29997187",
+  "POStatus": "POStatus-29997187",
+  "CreatedBy": "CreatedBy-29997187",
+  "Remarks": "Remarks-29997187",
+  "to_BP": {
+    "BPID": 2564517
+  }
+}
+
+
+### PurchaseOrders
+# @name PurchaseOrders_PATCH
+PATCH {{server}}/odata/v4/catalog/PurchaseOrders/29997187
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "POID": 29997187,
+  "VendorID": 33,
+  "POType": "POType-29997187",
+  "Plant": "t-29997187",
+  "POStatus": "POStatus-29997187",
+  "CreatedBy": "CreatedBy-29997187",
+  "Remarks": "Remarks-29997187",
+  "to_BP": {
+    "BPID": 2564517
+  }
+}
+
+
+### PurchaseOrders
+# @name PurchaseOrders_DELETE
+DELETE {{server}}/odata/v4/catalog/PurchaseOrders/29997187
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
